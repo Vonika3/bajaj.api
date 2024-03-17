@@ -2,10 +2,9 @@
   "name": "bajaj-api-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "functions/index.js",
   "scripts": {
-    "build": "netlify build --prod",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "netlify build --prod"
   },
   "keywords": [],
   "author": "",

@@ -1,16 +1,15 @@
-const serverless = require("serverless-http");
+const http = require("http");
 const express = require("express");
 const cors = require("cors");
 
+const port = process.env.PORT || 5000;
 const app = express();
-
-const router = express.Router();
 app.use(express.json());
 app.use(cors());
-router.get("/", (req, res) => {
+app.get("/", (req, res) => {
   res.json("Hello");
 });
-router.post("/bfhl", (req, res) => {
+app.post("/bfhl", (req, res) => {
   let { data } = req.body;
   if (!data) return res.status(402).json("Data is required.");
   const numbers = data.filter((item) => typeof item === "number");
@@ -28,5 +27,6 @@ router.post("/bfhl", (req, res) => {
   res.status(200).send(response_text);
 });
 
-app.use("/.netlify/functions/api", router);
-module.exports.handler = serverless(app);
+const server = http.createServer(app);
+
+server.listen(port, () => console.log(`Server started on ${port}`));
