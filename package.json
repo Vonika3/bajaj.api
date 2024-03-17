@@ -2,7 +2,7 @@
   "name": "bajaj-api-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "functions/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
