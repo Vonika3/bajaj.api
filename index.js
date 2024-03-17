@@ -5,7 +5,9 @@ const port = process.env.PORT || 5000;
 const app = express();
 app.use(express.json());
 app.use(cors());
-
+app.get("/", (req, res) => {
+  res.json("Hello");
+});
 app.post("/bfhl", (req, res) => {
   let { data } = req.body;
   if (!data) return res.status(402).json("Data is required.");
