@@ -1,3 +1,4 @@
+const http = require("http");
 const express = require("express");
 const cors = require("cors");
 
@@ -20,10 +21,12 @@ app.post("/bfhl", (req, res) => {
     email: "aneesh1635.be21@chitkara.edu.in",
     roll_no: 2110991635,
     numbers: numbers,
-    alphabets: alpha
+    alphabets: alpha,
   };
 
   res.status(200).send(response_text);
 });
 
-app.listen(port, () => console.log(`Server started on ${port}`));
+const server = http.createServer(app);
+
+server.listen(port, () => console.log(`Server started on ${port}`));
