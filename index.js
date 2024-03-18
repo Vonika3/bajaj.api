@@ -11,7 +11,7 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.json("Hello");
 });
-app.post("/", (req, res) => {
+app.post("/bfhl", (req, res) => {
   let { data } = req.body;
   if (!data) return res.status(402).json("Data is required.");
   const numbers = data.filter((item) => typeof item === "number");
