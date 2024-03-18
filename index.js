@@ -15,14 +15,18 @@ app.post("/bfhl", (req, res) => {
   let { data } = req.body;
   if (!data) return res.status(402).json("Data is required.");
   const numbers = data.filter((item) => typeof item === "number");
-  const alpha = data.filter((item) => typeof item === "string");
+  const odd_numbers = numbers.filter((item) => item % 2 !== 0);
+  const even_numbers = numbers.filter((item) => item % 2 === 0);
+  const alpha = data.filter((item) => typeof item === "string")
+                        .map((item) => item.toUpperCase());
 
   response_text = {
-    isSuccess: true,
-    name: "Aneesh Kumar",
+    is_success: true,
+    user_id: "aneesh_kumar_03012003",
     email: "aneesh1635.be21@chitkara.edu.in",
-    roll_no: 2110991635,
-    numbers: numbers,
+    roll_number: 2110991635,
+    odd_numbers: odd,
+    even_numbers: even,
     alphabets: alpha,
   };
 
