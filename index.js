@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.get("/", (req, res) => {
-  res.json("Hello there!! Please go to /bfhl");
+  res.json("Hello bajaj....");
 });
 app.post("/bfhl", (req, res) => {
   let { data } = req.body;
@@ -22,9 +22,9 @@ app.post("/bfhl", (req, res) => {
 
   response_text = {
     is_success: true,
-    user_id: "aneesh_kumar_03012003",
-    email: "aneesh1635.be21@chitkara.edu.in",
-    roll_number: 2110991635,
+    user_id: "vonika_09122003",
+    email: "vonika1559.be21@chitkara.edu.in",
+    roll_number: 2110991559,
     odd_numbers: odd_numbers,
     even_numbers: even_numbers,
     alphabets: alpha,
