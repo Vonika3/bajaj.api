@@ -25,8 +25,8 @@ app.post("/bfhl", (req, res) => {
     user_id: "aneesh_kumar_03012003",
     email: "aneesh1635.be21@chitkara.edu.in",
     roll_number: 2110991635,
-    odd_numbers: odd,
-    even_numbers: even,
+    odd_numbers: odd_numbers,
+    even_numbers: even_numbers,
     alphabets: alpha,
   };
 
