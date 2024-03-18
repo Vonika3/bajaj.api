@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.get("/", (req, res) => {
-  res.json("Hello");
+  res.json("Hello there!! Please go to /bfhl");
 });
 app.post("/bfhl", (req, res) => {
   let { data } = req.body;
